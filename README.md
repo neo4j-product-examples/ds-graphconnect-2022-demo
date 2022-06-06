@@ -25,9 +25,8 @@ Once you have Bloom running, you can import the [perspective](./PaperPerspective
 
 #### Install GDS
 
-Make sure to install
-[GDS 2.1]([https://github.com/neo4j/graph](https://github.com/neo4j/graph-data-science/releases)
- as well. In the `neo4j.conf` file, enable the Apache Arrow features by adding:
+Make sure to install [GDS 2.1](https://github.com/neo4j/graph-data-science/releases)
+as well. In the `neo4j.conf` file, enable the Apache Arrow features by adding:
 
 ```properties
 gds.arrow.listen_address=0.0.0.0:8491
