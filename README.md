@@ -11,7 +11,21 @@ data, you'll need to stage it in BigQuery.
 Spin up a VertexAI workbench and stage the files. You might need to make sure
 the service account backing the GCE VM has access to BigQuery.
 
-Install Neo4j Enterprise 4.4 on a GCE VM. Make sure to install
+### Installing Neo4j
+Install `Neo4j Enterprise v4.4` on a GCE VM. (You can install it anywhere you
+like, but we'll be using a GCP environment to make integration with
+BigQuery easier.
+
+#### Install Bloom
+
+Follow the [Bloom docs](https://neo4j.com/docs/bloom-user-guide/current/bloom-installation/)
+and install Bloom.
+
+Once you have Bloom running, you can import the [perspective](./PaperPerspective.json).
+
+#### Install GDS
+
+Make sure to install
 [GDS 2.1]([https://github.com/neo4j/graph](https://github.com/neo4j/graph-data-science/releases)
  as well. In the `neo4j.conf` file, enable the Apache Arrow features by adding:
 
@@ -19,6 +33,8 @@ Install Neo4j Enterprise 4.4 on a GCE VM. Make sure to install
 gds.arrow.listen_address=0.0.0.0:8491
 gds.arrow.enabled=true
 ```
+
+#### Configure the `neo4j` user
 
 Lastly, make sure to setup the `neo4j` password. Put a copy of it in a new file
 called `pass.txt` in the notebook environment.
