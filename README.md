@@ -8,6 +8,8 @@ You'll need grab a copy of the source dataset from
 [OGB](https://ogb.stanford.edu/kddcup2021/mag240m/). Once you pull down the
 data, you'll need to stage it in BigQuery.
 
+> See some details on the dataprep in [DATAPREP.md](./DATAPREP.md)
+
 Spin up a VertexAI workbench and stage the files. You might need to make sure
 the service account backing the GCE VM has access to BigQuery.
 
