@@ -21,7 +21,7 @@ BigQuery easier.)
 #### Install Bloom
 
 Follow the [Bloom docs](https://neo4j.com/docs/bloom-user-guide/current/bloom-installation/)
-and install Bloom.
+and install Bloom 2.2.
 
 Once you have Bloom running, you can import the [perspective](./PaperPerspective.json).
 
