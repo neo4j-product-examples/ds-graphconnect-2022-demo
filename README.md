@@ -35,8 +35,9 @@ gds.arrow.enabled=true
 
 #### Configuring Neo4j
 
-If you're using the full dataset, we recommend about 512g of heap for the jvm
-if possible.
+For the demo, we originally used 512g of heap for the jvm. A heap that size is
+**not** required for running the data import, but if you'd like to analyze the
+graph using the full suite of GDS we recommend having the headroom.
 
 ```properties
 dbms.memory.heap.initial_size=512g
