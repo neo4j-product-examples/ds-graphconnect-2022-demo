@@ -14,7 +14,7 @@ the service account backing the GCE VM has access to BigQuery.
 ### Installing Neo4j
 Install `Neo4j Enterprise v4.4` on a GCE VM. (You can install it anywhere you
 like, but we'll be using a GCP environment to make integration with
-BigQuery easier.
+BigQuery easier.)
 
 #### Install Bloom
 
@@ -32,6 +32,19 @@ as well. In the `neo4j.conf` file, enable the Apache Arrow features by adding:
 gds.arrow.listen_address=0.0.0.0:8491
 gds.arrow.enabled=true
 ```
+
+#### Configuring Neo4j
+
+If you're using the full dataset, we recommend about 512g of heap for the jvm
+if possible.
+
+```properties
+dbms.memory.heap.initial_size=512g
+dbms.memory.heap.max_size=512g
+```
+
+> Setting the `initial_size` will preallocate memory for the jvm during
+> startup of Neo4j.
 
 #### Configure the `neo4j` user
 
